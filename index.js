@@ -25,7 +25,7 @@ function generateNumbers() {
 $("#generate").click(function () {
     let count = $("#count").val();
 
-    if (count < 0 || count > 8) {
+    if (!count || count < 0 || count > 8) {
         $("#count").val("");
         $("#count").focus();
         return;
