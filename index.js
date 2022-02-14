@@ -1,17 +1,17 @@
 function randomNumber() {
-    return Math.floor(Math.random() * 90 + 1)
+    return Math.floor(Math.random() * 90 + 1);
 }
 
 function generateNumbers() {
-    let numList = []
+    let numList = [];
     while (numList.length < 7) {
         let num = randomNumber();
-        if (!numList.includes(num)) numList.push(num)
+        if (!numList.includes(num)) numList.push(num);
     }
 
-    numList = numList.map(num => (num + "").padStart(2, "0"))
-    let joker = numList.pop()
-    numList.sort((a, b) => a - b)
+    numList = numList.map(num => (num + "").padStart(2, "0"));
+    let joker = numList.pop();
+    numList.sort((a, b) => a - b);
 
     let superStar = randomNumber().toString().padStart(2, "0");
 
@@ -19,7 +19,7 @@ function generateNumbers() {
         numbers: numList,
         joker: joker,
         superStar: superStar
-    }
+    };
 }
 
 $("#generate").click(function () {
@@ -35,10 +35,10 @@ $("#generate").click(function () {
     $(".number-box").append("<h3>Numbers => Joker => SuperStar</h3>");
     
     for (let i = 0; i < +count; i++) {
-        const luckyNumbers = generateNumbers()
+        const luckyNumbers = generateNumbers();
         $(".number-box").append(
             `<p class="numbers">${luckyNumbers.numbers.join("-")} => ${luckyNumbers.joker} => ${luckyNumbers.superStar}</p>`
-        )
+        );
     }
     $("#count").focus();
 })
