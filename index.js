@@ -27,6 +27,7 @@ $("#generate").click(function () {
 
     if (count < 0 || count > 8) {
         $("#count").val("");
+        $("#count").focus();
         return;
     }
 
