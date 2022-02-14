@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    background-image: url("./images/numbers_background.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+.background {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    flex: 1;
+}
+.container {
+    color: #FFF;
+    background-color: #000;
+    margin: 4rem auto;
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border: 2px solid black;
+}
+h1 {
+    align-self: center;
+    font-size: 3rem;
+}
+.input-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+#count, #generate {
+    position: relative;
+    width: 40%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    transition: all ease-in-out 200ms;
+}
+#count:focus {
+    outline-color: #000;
+}
+#generate:hover {
+    border: 2px solid #FFF;
+    color: #FFF;
+    background-color: #000;
+    cursor: pointer;
+}
+#generate:active {
+    top: 2px;
+}
+.number-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+h3 {
+    text-align: center;
+}
+.numbers {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #FFF;
+    color: #000;
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        width: 16rem;
+        padding: 2rem 0.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 0.9rem;
+    }
+    .numbers {
+        font-size: 0.9rem;
+    }
+    #count, #generate {
+        padding: 0.8rem 0.5rem;
+    }
+}
