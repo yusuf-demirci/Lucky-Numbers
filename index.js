@@ -31,7 +31,7 @@ $("#generate").click(function () {
     }
 
     $(".number-box").empty();
-    $(".number-box").append("<h3>Numbers => Joker => SuperStar</h3>")
+    $(".number-box").append("<h3>Numbers => Joker => SuperStar</h3>");
     
     for (let i = 0; i < +count; i++) {
         const luckyNumbers = generateNumbers()
