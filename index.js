@@ -24,14 +24,15 @@ function generateNumbers() {
 
 $("#generate").click(function () {
     let count = $("#count").val();
-    
+
     if (count < 0 || count > 8) {
         $("#count").val("");
         return;
     }
 
     $(".number-box").empty();
-
+    $(".number-box").append("<h3>Numbers => Joker => SuperStar</h3>")
+    
     for (let i = 0; i < +count; i++) {
         const luckyNumbers = generateNumbers()
         $(".number-box").append(
