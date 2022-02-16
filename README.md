@@ -9,7 +9,7 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Get set(s) of numbers between 1-90
-- Enter number of sets of lucky numbers
+- Enter number of sets of lucky numbers.
 First six numbers are lucky numbers and different from each other
 Seventh number is joker and different from first six
 Last one is super star number 
